@@ -37,9 +37,14 @@ public class EquipmentRestController {
     public ResponseEquipmentDTO findByMgmNum(@PathVariable String mgmnum) {
         EquipmentEntity equipment = equipmentService.findByMgmNum(mgmnum);
         ResponseEquipmentDTO responseEquipmentDTO = new ResponseEquipmentDTO(equipment.getMgmNum(),equipment.getSerialNum(), equipment.getStatus(),equipment.getCategory());
-        return responseEquipmentDTO;
+        return responseEquipmentDTO;}
 
-    }
+//    @PostMapping("/findByMgmNum")
+//    public ResponseEntity<EquipmentEntity> findByMgmNum(@RequestParam("mgmNum") String mgmNum) {
+//        EquipmentEntity equipment = equipmentService.findByMgmNum(mgmNum);
+//
+//        return ResponseEntity.ok(equipment);
+//    }
 
 
   /*
